@@ -33,8 +33,11 @@ async function sendUser() {
         console.log("result", result);
 
         responseDiv.innerHTML = "User sent";
-        nameInput.value = "";
+        // clear the inputs
+        nameInput.value = ""; // clea
         jobInput.value = "";
+        // disable the button once the form has been submitted
+        sendButton.disabled = true;
 
     } catch (error) {
         console.log(error);
